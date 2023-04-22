@@ -1,0 +1,57 @@
+{% extends "./base.html" %}
+{% block title %}Holiday page|College Management System{%endblock%}
+{%block content%}
+
+<table class="table table-striped" >
+    <thead>
+      <tr>
+        {% for i in data_heading %}
+        <th scope="col">{{i}}</th>
+        {%endfor%}
+        <th scope="col">Actions</th>
+    </tr>
+</thead>
+<tbody>
+    {% for i in notifications %}
+<tr>
+        <td>{{i.date}} {{i.Message}}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+ 
+
+
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    form{
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        padding: 4rem;
+        align-self: center;
+        border-radius: 10%;
+    }
+    button{
+        margin-top: 1rem;
+    }
+    #red{
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        color: red;
+    }
+    #green{
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        color: green;
+    }
+</style>
+{%endblock%}
+
